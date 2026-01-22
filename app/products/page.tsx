@@ -10,6 +10,9 @@ import {
   Zap,
   Server,
   Battery,
+  Cable,
+  PanelTop,
+  ShieldCheck,
 } from "lucide-react";
 import Image from "next/image";
 
@@ -24,180 +27,148 @@ const ProductsPage = () => {
 
   const categories = [
     { id: "all", name: "All Products" },
-    { id: "control", name: "Control Systems" },
-    { id: "solar", name: "Solar Solutions" },
-    { id: "electrical", name: "Electrical Fittings" },
-    { id: "security", name: "Security Equipment" },
+    { id: "fittings", name: "Electrical Fittings" },
+    { id: "panels", name: "Electrical Panels" },
+    { id: "solar", name: "Solar & ESS" },
+    { id: "industrial", name: "Industrial Controls" },
+    { id: "elv", name: "Extra Low Voltage (ELV)" },
+    { id: "accessories", name: "Wiring Accessories" },
+    { id: "cables", name: "Cables" },
   ];
 
   const products = [
+    // 🔌 ELECTRICAL FITTINGS
     {
-      category: "control",
-      icon: Cpu,
-      name: "MCC Control Panels",
-      description: "Motor Control Center panels for industrial applications",
+      category: "fittings",
+      icon: Plug,
+      name: "Electrical Fittings",
+      description: "Lighting fittings, switches, socket outlets and sensors",
       features: [
-        "Custom ratings up to 3200A",
-        "Rittal/Schneider enclosures",
-        "Full safety modules",
-        "Remote monitoring ready",
+        "Indoor & outdoor lighting fittings",
+        "Switches and socket outlets",
+        "Motion and occupancy sensors",
+        "Architectural and decorative designs",
       ],
-      brands: ["Schneider", "ABB", "Rittal"],
-      image: "/images/controlpanel.jpg",
+      brands: [
+        "Spazio Lights",
+        "EGLO",
+        "ZANFI",
+        "Pollo",
+        "Schneider",
+        "AKT",
+        "Liper",
+        "MK",
+      ],
+      image: "/images/elecfittings.jpg",
     },
+
+    // 🧰 ELECTRICAL PANELS
     {
-      category: "control",
-      icon: Power,
-      name: "Automatic Changeover Panels",
-      description: "AMF panels for seamless power transition",
+      category: "panels",
+      icon: PanelTop,
+      name: "Electrical Panels",
+      description: "Power distribution and automation panels",
       features: [
-        "Intelligent control systems",
-        "Multiple input options",
-        "Generator synchronization",
-        "Sub-second switching",
+        "Generator Synchronizing Panels",
+        "Automatic Changeover Panels (ATS / AMF)",
+        "Power Distribution Panels",
+        "Industrial Control & Automation Panels",
       ],
-      brands: ["Deep Sea Electronics", "ComAp", "Schneider"],
-      image: "/images/changeover.jpg",
+      brands: ["Schneider", "ABB", "Rittal", "Siemens", "Entis"],
+      image: "/images/control.jpg",
     },
-    {
-      category: "control",
-      icon: Server,
-      name: "Distribution Panels",
-      description: "Power distribution boards for all applications",
-      features: [
-        "Modular design",
-        "Up to 6300A capacity",
-        "Customizable outputs",
-        "Bus bar integration",
-      ],
-      brands: ["Schneider", "Nimel", "ABB"],
-      image: "/images/distpanel.jpg",
-    },
+
+    // ☀️ SOLAR & ESS
     {
       category: "solar",
       icon: Sun,
-      name: "Solar PV Systems",
-      description: "Complete solar power installations",
+      name: "Solar Panels, Inverters & ESS",
+      description: "Renewable energy generation and storage systems",
       features: [
-        "10KW to 6MW capacity",
-        "Grid-tied and off-grid",
-        "Battery storage integration",
-        "Smart monitoring",
+        "Solar PV modules",
+        "Hybrid & grid-tied inverters",
+        "Energy Storage Systems (ESS)",
+        "Battery management systems",
       ],
-      brands: ["Sigenergy", "Huawei", "SMA"],
+      brands: [
+        "Sigenergy Hybrid Inverters",
+        "Sigenergy Batteries",
+        "Jinko Solar",
+        "JA Solar",
+        "SunPower",
+      ],
       image: "/images/solar.jpg",
     },
+
+    // ⚙️ INDUSTRIAL CONTROLS
     {
-      category: "solar",
-      icon: Battery,
-      name: "Energy Storage Systems",
-      description: "Advanced battery storage solutions",
+      category: "industrial",
+      icon: Cpu,
+      name: "Industrial Control Products",
+      description: "Automation and motor control solutions",
       features: [
-        "LiFePO4 technology",
-        "Modular expansion",
-        "20+ year lifespan",
-        "Real-time monitoring",
+        "PLCs and automation controllers",
+        "AC & DC inverter drives",
+        "DOL & star-delta starters",
+        "Contactors, relays & timers",
+        "Circuit breakers & power supplies",
       ],
-      brands: ["Sigenergy", "Tesla", "BYD"],
-      image: "/images/battery.jpg",
+      brands: [
+        "Siemens",
+        "Schneider",
+        "ABB",
+        "Rittal",
+        "Entis",
+        "Omron",
+        "Mitsubishi",
+        "Emerson",
+      ],
+      image: "/images/control-panel.jpeg",
     },
+
+    // 📡 ELV SYSTEMS
     {
-      category: "solar",
-      icon: Zap,
-      name: "Solar Inverters",
-      description: "High-efficiency power conversion",
+      category: "elv",
+      icon: ShieldCheck,
+      name: "Extra Low Voltage (ELV) Systems",
+      description: "Security, communication and fire detection systems",
       features: [
-        "String and hybrid inverters",
-        "MPPT technology",
-        "Grid compliance",
-        "Remote monitoring",
+        "CCTV surveillance systems",
+        "Access control & intercoms",
+        "Intruder alarm systems",
+        "Voice & data networking",
+        "Fire detection systems",
       ],
-      brands: ["Sigenergy", "SMA", "Fronius"],
-      image: "/images/solarr.jpg",
+      brands: ["Cisco", "D-Link", "Panasonic", "Honeywell", "Bosch", "Eaton"],
+      image: "/images/securitysyste.jpg",
     },
+
+    // 🔩 WIRING ACCESSORIES
     {
-      category: "electrical",
-      icon: Plug,
-      name: "Electrical Fittings",
-      description: "Premium switches and socket outlets",
+      category: "accessories",
+      icon: Cable,
+      name: "Wiring Accessories",
+      description: "Panel and cable management accessories",
       features: [
-        "Stainless steel finish",
-        "1-3 gang options",
-        "TV/data outlets",
-        "Modern designs",
+        "Panel flex and terminal blocks",
+        "Ferrules and cable ties",
+        "Cable numbering systems",
+        "Panel trunking",
+        "DIN rails and G rails",
       ],
-      brands: ["Schneider", "Legrand", "MK"],
-      image: "/images/elecfittings.jpg",
+      brands: [],
+      image: "/images/wiringg.jpg",
     },
+
+    // 🔗 CABLES
     {
-      category: "electrical",
-      icon: Zap,
-      name: "Circuit Protection",
-      description: "Comprehensive safety devices",
-      features: [
-        "MCBs and RCBOs",
-        "Surge protectors",
-        "Earth leakage breakers",
-        "Motor starters",
-      ],
-      brands: ["Schneider", "ABB", "Siemens"],
-      image: "/images/circuitprotector.jpg",
-    },
-    {
-      category: "electrical",
-      icon: Power,
-      name: "Lighting Systems",
-      description: "Energy-efficient lighting solutions",
-      features: [
-        "LED technology",
-        "Modular designs",
-        "Indoor/outdoor options",
-        "Smart controls available",
-      ],
-      brands: ["Philips", "Osram", "GE Lighting"],
-      image: "/images/lightingsystems.jpg",
-    },
-    {
-      category: "security",
-      icon: Shield,
-      name: "CCTV Systems",
-      description: "Advanced surveillance cameras",
-      features: [
-        "IP and analog options",
-        "Night vision capability",
-        "Cloud storage",
-        "Mobile viewing",
-      ],
-      brands: ["Hikvision", "Dahua", "Axis"],
-      image: "/images/securityy.jpg",
-    },
-    {
-      category: "security",
-      icon: Shield,
-      name: "Access Control",
-      description: "Smart access management systems",
-      features: [
-        "Biometric readers",
-        "Hotel key cards",
-        "Mobile credentials",
-        "Audit trail logging",
-      ],
-      brands: ["ZKTeco", "HID", "Suprema"],
-      image: "/images/accessmngt.jpg",
-    },
-    {
-      category: "security",
-      icon: Shield,
-      name: "Alarm Systems",
-      description: "Intrusion detection and fire alarms",
-      features: [
-        "Addressable technology",
-        "Zone monitoring",
-        "Remote alerts",
-        "24/7 monitoring",
-      ],
-      brands: ["Gent", "Honeywell", "Bosch"],
-      image: "/images/alarm.jpg",
+      category: "cables",
+      icon: Cable,
+      name: "Electrical Cables",
+      description: "Power and control cables for all installations",
+      features: ["Armoured cables", "Non-armoured cables", "Flexible cables"],
+      brands: ["Nigerchin", "Coleman Cables", "BICC", "Stopend", "DrsKable"],
+      image: "/images/electric.jpg",
     },
   ];
 
@@ -226,7 +197,7 @@ const ProductsPage = () => {
               duration: 1.2,
               ease: "power4.out",
               delay: 0.3,
-            }
+            },
           );
 
           gsap.fromTo(
@@ -238,13 +209,13 @@ const ProductsPage = () => {
               duration: 0.8,
               ease: "power3.out",
               delay: 0.8,
-            }
+            },
           );
 
           gsap.fromTo(
             ".hero-description",
             { opacity: 0, y: 30 },
-            { opacity: 1, y: 0, duration: 0.8, ease: "power2.out", delay: 1 }
+            { opacity: 1, y: 0, duration: 0.8, ease: "power2.out", delay: 1 },
           );
 
           // Filter Buttons
@@ -261,7 +232,7 @@ const ProductsPage = () => {
                 trigger: filterRef.current,
                 start: "top 80%",
               },
-            }
+            },
           );
 
           // Floating Animation
@@ -289,7 +260,7 @@ const ProductsPage = () => {
                 trigger: brandsRef.current,
                 start: "top 70%",
               },
-            }
+            },
           );
 
           // Quality Cards
@@ -307,7 +278,7 @@ const ProductsPage = () => {
                 trigger: qualityRef.current,
                 start: "top 70%",
               },
-            }
+            },
           );
 
           // CTA Animation
@@ -324,7 +295,7 @@ const ProductsPage = () => {
                 trigger: ctaRef.current,
                 start: "top 80%",
               },
-            }
+            },
           );
         });
       });
@@ -347,7 +318,7 @@ const ProductsPage = () => {
             duration: 0.8,
             stagger: 0.1,
             ease: "back.out(1.7)",
-          }
+          },
         );
       });
     }
@@ -628,7 +599,7 @@ const ProductsPage = () => {
         </div>
 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <div className="cta-content opacity-0">
+          <div className="cta-content opacity-10">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-10 heading-font text-shadow-glow leading-tight">
               Need a Custom Solution?
             </h2>

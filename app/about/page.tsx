@@ -51,10 +51,10 @@ const AboutPage = () => {
   ];
 
   const sectors = [
+    { name: "Power", icon: TrendingUp },
     { name: "Oil & Gas", icon: Factory },
     { name: "Telecommunications", icon: Zap },
     { name: "Manufacturing", icon: Factory },
-    { name: "Banking & Finance", icon: TrendingUp },
     { name: "Hospitality", icon: Building2 },
     { name: "Engineering", icon: Lightbulb },
     { name: "Healthcare", icon: Heart },
@@ -81,7 +81,7 @@ const AboutPage = () => {
               duration: 1.2,
               ease: "power4.out",
               delay: 0.3,
-            }
+            },
           );
 
           gsap.fromTo(
@@ -93,13 +93,13 @@ const AboutPage = () => {
               duration: 0.8,
               ease: "power3.out",
               delay: 0.8,
-            }
+            },
           );
 
           gsap.fromTo(
             ".hero-description",
             { opacity: 0, y: 30 },
-            { opacity: 1, y: 0, duration: 0.8, ease: "power2.out", delay: 1 }
+            { opacity: 1, y: 0, duration: 0.8, ease: "power2.out", delay: 1 },
           );
 
           // Overview Section
@@ -115,7 +115,7 @@ const AboutPage = () => {
                 trigger: overviewRef.current,
                 start: "top 70%",
               },
-            }
+            },
           );
 
           gsap.fromTo(
@@ -132,7 +132,7 @@ const AboutPage = () => {
                 trigger: overviewRef.current,
                 start: "top 70%",
               },
-            }
+            },
           );
 
           // Vision/Mission Cards
@@ -150,7 +150,7 @@ const AboutPage = () => {
                 trigger: visionRef.current,
                 start: "top 70%",
               },
-            }
+            },
           );
 
           // Values Animation
@@ -168,7 +168,7 @@ const AboutPage = () => {
                 trigger: valuesRef.current,
                 start: "top 70%",
               },
-            }
+            },
           );
 
           // Sectors Animation
@@ -186,7 +186,7 @@ const AboutPage = () => {
                 trigger: sectorsRef.current,
                 start: "top 70%",
               },
-            }
+            },
           );
 
           // Why Us Cards
@@ -203,7 +203,7 @@ const AboutPage = () => {
                 trigger: whyUsRef.current,
                 start: "top 70%",
               },
-            }
+            },
           );
 
           // CTA Animation
@@ -220,7 +220,7 @@ const AboutPage = () => {
                 trigger: ctaRef.current,
                 start: "top 80%",
               },
-            }
+            },
           );
 
           // Floating Animation for Icons
@@ -369,7 +369,7 @@ const AboutPage = () => {
               <div className="stat-card opacity-0 bg-gradient-to-br from-green-600 to-green-800 p-8 rounded-2xl text-white shadow-2xl hover:scale-105 transition-all duration-300 border-2 border-green-500/50">
                 <Shield className="w-16 h-16 mb-6 float-icon" />
                 <div className="text-4xl font-black mb-3 heading-font">
-                  24/7
+                  Prompt
                 </div>
                 <div className="text-green-100 font-semibold text-lg">
                   Support Available
@@ -562,7 +562,7 @@ const AboutPage = () => {
                 image: "/images/safety.jpg",
               },
               {
-                title: "24/7 Support",
+                title: "Prompt Support",
                 description:
                   "Round-the-clock technical support and maintenance services for peace of mind",
                 image: "/images/247.jpg",

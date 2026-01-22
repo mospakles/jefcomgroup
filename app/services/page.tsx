@@ -12,6 +12,11 @@ import {
   Wrench,
   CheckCircle,
   ChevronRight,
+  Building2,
+  Cpu,
+  Hammer,
+  PanelTop,
+  Wind,
 } from "lucide-react";
 import Image from "next/image";
 
@@ -25,136 +30,142 @@ const ServicesPage = () => {
 
   const services = [
     {
-      id: "electrical",
+      id: "electrical-design",
       icon: Zap,
-      title: "Electrical Design & Wiring",
+      title: "Electrical Designs",
       description:
-        "Comprehensive electrical design and installation services for all types of structures",
+        "ELV, Low, Medium and High voltage electrical design solutions",
       details: [
-        "Home, office, and commercial electrical design with architectural integration",
-        "External lighting schemes for streets, perimeters, and parks",
-        "Complete electrical installation services with up-to-date equipment",
-        "Mechanical installation design (ventilation and plumbing)",
-        "Security and fire safety system integration",
-        "Cable trunking and distribution panel design",
+        "Low, medium and high voltage electrical system design",
+        "ELV systems design (CCTV, Access Control, Fire Alarm, Voice & Data)",
+        "Power distribution and load calculations",
+        "Lighting design and lux level analysis",
+        "Panel schedules and single line diagrams",
       ],
       color: "from-green-700 to-green-900",
-      image: "/images/distpanel.jpg",
+      image: "/images/cranes.jpg",
     },
+
     {
-      id: "automation",
-      icon: Home,
-      title: "Home Automation",
-      description: "Smart home solutions for ultimate comfort and convenience",
+      id: "electrical-installation",
+      icon: Wrench,
+      title: "Electrical & ELV Installation",
+      description: "Electrical, ELV installation and lighting systems",
       details: [
-        "Control lights, curtains, AC, and music from mobile devices",
-        "Automated gate and garage door systems",
-        "Integrated security and fire alarm systems",
-        "Smart heating and cooling control",
-        "Voice-activated home control systems",
-        "Energy monitoring and management",
+        "Conduit and industrial piping installation",
+        "Electrical wiring and cable routing",
+        "Panel installation and cable terminations",
+        "Voice & Data infrastructure",
+        "Indoor, outdoor and industrial lighting systems",
       ],
-      color: "from-orange-600 to-orange-700",
-      image: "/images/automation.jpg",
+      color: "from-emerald-700 to-emerald-900",
+      image: "/images/mechinstall.jpg",
     },
+
     {
-      id: "solar",
-      icon: Sun,
-      title: "Solar & Renewable Energy",
-      description: "Green energy solutions for sustainable power generation",
+      id: "electrical-panels",
+      icon: PanelTop,
+      title: "Electrical Panels",
+      description: "Power distribution and industrial control panels",
       details: [
-        "Solar panel design and installation for homes and businesses",
-        "Battery storage systems and inverter installations",
-        "Hybrid power plant design (solar, gas, and diesel integration)",
-        "Partnership with Sigenergy for cutting-edge solutions",
-        "Utility-scale solar installations up to 20 MWh",
-        "Energy management and monitoring systems",
-      ],
-      color: "from-yellow-500 to-orange-600",
-      image: "/images/solar.jpg",
-    },
-    {
-      id: "control",
-      icon: Cog,
-      title: "Control Panel Design & Fabrication",
-      description:
-        "Custom control panels for industrial and commercial applications",
-      details: [
-        "Design and fabrication using Rittal & Schneider enclosures",
-        "Pump control panels for factories and petroleum depots",
-        "Automatic changeover systems and AMF panels",
-        "Production process control systems",
-        "MCC panels and distribution boards",
-        "Full safety module integration (overload, earth leakage, circuit breakers)",
+        "Generator synchronizing panels",
+        "Automatic Changeover (ATS / AMF) panels",
+        "Power distribution panels",
+        "Industrial control and automation panels",
       ],
       color: "from-gray-700 to-gray-900",
-      image: "/images/controlpanel.jpg",
+      image: "/images/control.jpg",
     },
+
     {
-      id: "security",
+      id: "renewable-energy",
+      icon: Sun,
+      title: "Renewable Energy",
+      description: "Solar panels, inverters and energy storage systems (ESS)",
+      details: [
+        "Solar PV system design and installation",
+        "Hybrid and grid-tied inverters",
+        "Energy Storage Systems (ESS)",
+        "Residential, commercial and industrial solar solutions",
+      ],
+      color: "from-yellow-500 to-orange-600",
+      image: "/images/solarrr.jpg",
+    },
+
+    {
+      id: "industrial-automation",
+      icon: Cpu,
+      title: "Industrial Control & Automation",
+      description: "PLCs, drives, process and plant automation",
+      details: [
+        "PLC-based automation systems",
+        "AC & DC drive installations",
+        "Process and plant automation",
+        "Motor control and instrumentation systems",
+      ],
+      color: "from-slate-700 to-slate-900",
+      image: "/images/autoo.jpg",
+    },
+
+    {
+      id: "security-systems",
       icon: Shield,
       title: "Security Systems",
-      description: "Advanced security installations for complete peace of mind",
+      description: "CCTV, access control and intruder alarm systems",
       details: [
-        "CCTV installation (standalone, IP network, speed dome cameras)",
-        "Access control panels and hotel keycard systems",
-        "Burglary-proof equipment for homes and offices",
-        "Network video servers and DVR systems",
-        "Pinhole and surveillance camera installations",
-        "24/7 monitoring system setup",
+        "CCTV surveillance systems",
+        "Access control and biometric systems",
+        "Intruder and burglar alarm systems",
+        "Integrated ELV security solutions",
       ],
-      color: "from-gray-400 to-gray-600",
+      color: "from-gray-500 to-gray-700",
       image: "/images/securitysyste.jpg",
     },
+
     {
-      id: "lighting",
-      icon: Lightbulb,
-      title: "Street & Park Lighting",
-      description:
-        "Professional lighting solutions for public and private spaces",
+      id: "mechanical-design",
+      icon: Wind,
+      title: "Mechanical Designs",
+      description: "HVAC, plumbing and framework design solutions",
       details: [
-        "Metal halide and sodium vapor lamp installations",
-        "LED high bay dome and flood light fittings",
-        "Solar-powered street lighting systems",
-        "Perimeter and security lighting design",
-        "Automatic dark-activated control systems",
-        "Energy-efficient LED park lights",
+        "HVAC system design",
+        "Plumbing and drainage design",
+        "Mechanical frameworks and layouts",
+        "Equipment sizing and specifications",
       ],
-      color: "from-amber-700 to-amber-900",
-      image: "/images/lightingsystems.jpg",
+      color: "from-blue-700 to-blue-900",
+      image: "/images/mechanical.jpg",
     },
+
     {
-      id: "power",
-      icon: Wrench,
-      title: "Power Systems Installation",
-      description: "Complete power supply switching and distribution solutions",
-      details: [
-        "Switchgear and busbar installations",
-        "Manual and automatic changeover systems",
-        "Circuit breaker switching systems",
-        "Generator synchronizing panels",
-        "Transformer control and distribution panels",
-        "AMF (Auto Mains Failure) systems for critical facilities",
-      ],
-      color: "from-gold-700 to-gold-900",
-      image: "/images/powerauto.jpg",
-    },
-    {
-      id: "plumbing",
-      icon: Droplets,
-      title: "Plumbing & Mechanical",
+      id: "mechanical-installation",
+      icon: Hammer,
+      title: "Mechanical Construction & Installation",
       description:
-        "Professional plumbing installations and mechanical services",
+        "Professional mechanical construction and on-site installations",
       details: [
-        "PPR and PVC piping installations",
-        "Water supply and distribution systems",
-        "Sewage system design and implementation",
-        "Fire hydrant system installation",
-        "Pump control systems",
-        "Automatic water management systems",
+        "HVAC installation works",
+        "Plumbing and piping installations",
+        "Mechanical equipment installation",
+        "Testing and commissioning",
       ],
       color: "from-cyan-700 to-cyan-900",
       image: "/images/plumbing.jpg",
+    },
+
+    {
+      id: "civil-structural",
+      icon: Building2,
+      title: "Structures & Civil Construction",
+      description: "Metal structures and civil construction works",
+      details: [
+        "Steel and metal structures",
+        "Civil construction works",
+        "Equipment foundations and supports",
+        "Industrial and commercial construction",
+      ],
+      color: "from-stone-700 to-stone-900",
+      image: "/images/structural.jpg",
     },
   ];
 
@@ -178,7 +189,7 @@ const ServicesPage = () => {
               duration: 1.2,
               ease: "power4.out",
               delay: 0.3,
-            }
+            },
           );
 
           gsap.fromTo(
@@ -190,13 +201,13 @@ const ServicesPage = () => {
               duration: 0.8,
               ease: "power3.out",
               delay: 0.8,
-            }
+            },
           );
 
           gsap.fromTo(
             ".hero-description",
             { opacity: 0, y: 30 },
-            { opacity: 1, y: 0, duration: 0.8, ease: "power2.out", delay: 1 }
+            { opacity: 1, y: 0, duration: 0.8, ease: "power2.out", delay: 1 },
           );
 
           // Overview Section
@@ -212,7 +223,7 @@ const ServicesPage = () => {
                 trigger: overviewRef.current,
                 start: "top 70%",
               },
-            }
+            },
           );
 
           gsap.fromTo(
@@ -229,7 +240,7 @@ const ServicesPage = () => {
                 trigger: overviewRef.current,
                 start: "top 60%",
               },
-            }
+            },
           );
 
           // Service Details Animation
@@ -246,7 +257,7 @@ const ServicesPage = () => {
                 trigger: detailsRef.current,
                 start: "top 70%",
               },
-            }
+            },
           );
 
           gsap.fromTo(
@@ -261,7 +272,7 @@ const ServicesPage = () => {
                 trigger: detailsRef.current,
                 start: "top 70%",
               },
-            }
+            },
           );
 
           gsap.fromTo(
@@ -277,7 +288,7 @@ const ServicesPage = () => {
                 trigger: detailsRef.current,
                 start: "top 60%",
               },
-            }
+            },
           );
 
           gsap.fromTo(
@@ -294,7 +305,7 @@ const ServicesPage = () => {
                 trigger: detailsRef.current,
                 start: "top 60%",
               },
-            }
+            },
           );
 
           // Process Animation
@@ -311,7 +322,7 @@ const ServicesPage = () => {
                 trigger: processRef.current,
                 start: "top 70%",
               },
-            }
+            },
           );
 
           // CTA Animation
@@ -328,7 +339,7 @@ const ServicesPage = () => {
                 trigger: ctaRef.current,
                 start: "top 80%",
               },
-            }
+            },
           );
 
           // Floating Animation
@@ -377,8 +388,8 @@ const ServicesPage = () => {
             </h1>
             <div className="hero-divider w-0 h-1 bg-orange-600 mx-auto mb-10 rounded-full"></div>
             <p className="text-xl md:text-2xl text-gray-200 font-semibold hero-description opacity-0 leading-relaxed">
-              Comprehensive electrical engineering solutions tailored to your
-              needs
+              Comprehensive electrical engineering and allied solutions tailored
+              to your needs
             </p>
           </div>
         </div>
@@ -398,8 +409,9 @@ const ServicesPage = () => {
             </h2>
             <div className="w-40 h-2 bg-gradient-to-r from-transparent via-orange-500 to-transparent mx-auto mb-10 rounded-full"></div>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto font-semibold leading-relaxed">
-              From design to installation and maintenance, we handle every
-              aspect of your electrical engineering project
+              From design to installation and maintenance, we deliver turnkey
+              projects with integration of hardwares and softwares produced with
+              the latest technology.
             </p>
           </div>
 

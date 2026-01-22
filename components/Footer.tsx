@@ -9,6 +9,9 @@ import {
   Twitter,
   Facebook,
   ArrowUp,
+  X,
+  Youtube,
+  Instagram,
 } from "lucide-react";
 import Image from "next/image";
 
@@ -43,7 +46,7 @@ const Footer = () => {
                 trigger: footerRef.current,
                 start: "top 90%",
               },
-            }
+            },
           );
 
           // Footer Bottom Animation
@@ -59,7 +62,7 @@ const Footer = () => {
                 trigger: footerRef.current,
                 start: "top 90%",
               },
-            }
+            },
           );
 
           // Social Icons Animation
@@ -77,7 +80,7 @@ const Footer = () => {
                 trigger: footerRef.current,
                 start: "top 90%",
               },
-            }
+            },
           );
 
           // Floating Animation for Logo
@@ -134,22 +137,39 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://www.linkedin.com/company/jefcomgroup"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="social-icon opacity-0 w-10 h-10 bg-gray-800 hover:bg-gradient-to-br hover:from-green-700 hover:to-green-900 rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110 border border-gray-700 hover:border-green-600 box-shadow-glow"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
+
               <a
-                href="#"
+                href="https://x.com/jefcomgroup"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="social-icon opacity-0 w-10 h-10 bg-gray-800 hover:bg-gradient-to-br hover:from-green-700 hover:to-green-900 rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110 border border-gray-700 hover:border-green-600 box-shadow-glow"
               >
-                <Twitter className="w-5 h-5" />
+                <X className="w-5 h-5" />
               </a>
+
               <a
-                href="#"
+                href="https://www.facebook.com/JefcomIntegratedSystems"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="social-icon opacity-0 w-10 h-10 bg-gray-800 hover:bg-gradient-to-br hover:from-green-700 hover:to-green-900 rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110 border border-gray-700 hover:border-green-600 box-shadow-glow"
               >
                 <Facebook className="w-5 h-5" />
+              </a>
+
+              <a
+                href="https://www.instagram.com/jefcomgroup"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-icon opacity-0 w-10 h-10 bg-gray-800 hover:bg-gradient-to-br hover:from-green-700 hover:to-green-900 rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110 border border-gray-700 hover:border-green-600 box-shadow-glow"
+              >
+                <Instagram className="w-5 h-5" />
               </a>
             </div>
           </div>

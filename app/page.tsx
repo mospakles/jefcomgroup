@@ -34,46 +34,53 @@ const Homepage = () => {
 
   const slides = [
     {
-      title: "Electrical & ELV Design",
+      title: "Electrical Designs",
       description:
-        "Leading the way in electrical engineering, automation, and renewable energy",
+        "ELV, Low, Medium and High voltage electrical design solutions",
       image: "/images/cranes.jpg",
     },
     {
-      title: "Mechanical Design",
+      title: "Electrical & ELV Installation",
       description:
-        "Harnessing green energy for homes, businesses, and communities",
-      image: "/images/mechanical.jpg",
-    },
-    {
-      title: "Civil & Structural Design",
-      description:
-        "Advanced control panels and automation for modern industries",
-      image: "/images/structural.jpg",
-    },
-    {
-      title: "Solar, Renewable Energy & ESS",
-      description:
-        "Advanced control panels and automation for modern industries",
-      image: "/images/solarrr.jpg",
-    },
-    {
-      title: "Electrical & Mechanical Installation",
-      description:
-        "Advanced control panels and automation for modern industries",
+        "Conduit and industrial piping, wiring, cable routing, panels, lighting, Voice & Data",
       image: "/images/mechinstall.jpg",
     },
     {
-      title: "Home & Industrial Automation",
+      title: "Electrical Panels",
       description:
-        "Advanced control panels and automation for modern industries",
+        "Generator synchronizing panels, ATS, power distribution and industrial control panels",
+      image: "/images/control.jpg",
+    },
+    {
+      title: "Renewable Energy",
+      description: "Solar panels, inverters, energy storage systems (ESS)",
+      image: "/images/solarrr.jpg",
+    },
+    {
+      title: "Industrial Control & Automation",
+      description: "PLCs, drives, process and plant automation",
       image: "/images/autoo.jpg",
     },
     {
-      title: "Control Panels & Systems",
+      title: "Security Systems",
+      description: "CCTV, access control and intruder alarm systems",
+      image: "/images/securitysyste.jpg",
+    },
+    {
+      title: "Mechanical Designs",
+      description: "HVAC, plumbing and framework design solutions",
+      image: "/images/mechanical.jpg",
+    },
+    {
+      title: "Mechanical Construction & Installation",
       description:
-        "Advanced control panels and automation for modern industries",
-      image: "/images/control.jpg",
+        "Professional mechanical construction and on-site installations",
+      image: "/images/plumbing.jpg",
+    },
+    {
+      title: "Structures & Civil Construction",
+      description: "Metal structures and civil construction works",
+      image: "/images/structural.jpg",
     },
   ];
 
@@ -186,25 +193,25 @@ const Homepage = () => {
           gsap.fromTo(
             ".hero-title",
             { opacity: 0, y: 100 },
-            { opacity: 1, y: 0, duration: 1.2, ease: "power4.out", delay: 0.3 }
+            { opacity: 1, y: 0, duration: 1.2, ease: "power4.out", delay: 0.3 },
           );
 
           gsap.fromTo(
             ".hero-subtitle",
             { opacity: 0, x: -50 },
-            { opacity: 1, x: 0, duration: 0.8, ease: "power3.out", delay: 0.5 }
+            { opacity: 1, x: 0, duration: 0.8, ease: "power3.out", delay: 0.5 },
           );
 
           gsap.fromTo(
             ".hero-description",
             { opacity: 0, y: 30 },
-            { opacity: 1, y: 0, duration: 0.8, ease: "power2.out", delay: 0.8 }
+            { opacity: 1, y: 0, duration: 0.8, ease: "power2.out", delay: 0.8 },
           );
 
           gsap.fromTo(
             ".hero-buttons",
             { opacity: 0, y: 30 },
-            { opacity: 1, y: 0, duration: 0.8, ease: "power2.out", delay: 1.1 }
+            { opacity: 1, y: 0, duration: 0.8, ease: "power2.out", delay: 1.1 },
           );
 
           // Stats Animation
@@ -222,7 +229,7 @@ const Homepage = () => {
                 trigger: statsRef.current,
                 start: "top 80%",
               },
-            }
+            },
           );
 
           // Services Animation
@@ -240,7 +247,7 @@ const Homepage = () => {
                 trigger: servicesRef.current,
                 start: "top 70%",
               },
-            }
+            },
           );
 
           // Projects Animation
@@ -257,7 +264,7 @@ const Homepage = () => {
                 trigger: projectsRef.current,
                 start: "top 70%",
               },
-            }
+            },
           );
 
           // Testimonials Animation
@@ -273,7 +280,7 @@ const Homepage = () => {
                 trigger: testimonialsRef.current,
                 start: "top 70%",
               },
-            }
+            },
           );
 
           // Floating Animation for Icons
@@ -299,7 +306,7 @@ const Homepage = () => {
                 trigger: ctaRef.current,
                 start: "top 80%",
               },
-            }
+            },
           );
         });
       });
@@ -327,7 +334,7 @@ const Homepage = () => {
 
   const prevTestimonial = () => {
     setCurrentTestimonial(
-      (prev) => (prev - 1 + testimonials.length) % testimonials.length
+      (prev) => (prev - 1 + testimonials.length) % testimonials.length,
     );
   };
 
@@ -586,7 +593,7 @@ const Homepage = () => {
                 description:
                   "Complete electrical control panels and perimeter lighting for petroleum tank farm",
                 category: "Oil & Gas",
-                image: "/images/oilngas.jpg",
+                image: "/images/oilngass.jpg",
               },
             ].map((project, index) => (
               <div
@@ -682,7 +689,7 @@ const Homepage = () => {
                           key={i}
                           className="w-4 h-4 text-orange-500 fill-orange-500 drop-shadow-lg"
                         />
-                      )
+                      ),
                     )}
                   </div>
                   <h4 className="text-xl font-bold text-white heading-font mb-2">
