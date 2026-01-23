@@ -43,7 +43,7 @@ const ServicesPage = () => {
         "Panel schedules and single line diagrams",
       ],
       color: "from-green-700 to-green-900",
-      image: "/images/cranes.jpg",
+      image: "/images/cranes.png",
     },
 
     {
@@ -59,7 +59,7 @@ const ServicesPage = () => {
         "Indoor, outdoor and industrial lighting systems",
       ],
       color: "from-emerald-700 to-emerald-900",
-      image: "/images/mechinstall.jpg",
+      image: "/images/mechinstall.png",
     },
 
     {
@@ -74,7 +74,7 @@ const ServicesPage = () => {
         "Industrial control and automation panels",
       ],
       color: "from-gray-700 to-gray-900",
-      image: "/images/control.jpg",
+      image: "/images/control.png",
     },
 
     {
@@ -558,7 +558,7 @@ const ServicesPage = () => {
                   <div className="benefit-card opacity-0 bg-gradient-to-br from-gray-700 to-gray-800 rounded-2xl p-6 shadow-xl border-2 border-gray-600 hover:border-blue-500 hover:shadow-blue-500/20 transition-all duration-300 group">
                     <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 to-blue-500/0 group-hover:from-blue-500/10 group-hover:to-transparent rounded-2xl transition-all duration-500"></div>
                     <h4 className="font-black text-white mb-3 text-lg heading-font group-hover:text-blue-400 transition-colors">
-                      24/7 Support
+                      Prompt Support
                     </h4>
                     <p className="text-base text-gray-300 leading-relaxed">
                       Round-the-clock maintenance and technical assistance

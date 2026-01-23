@@ -311,7 +311,7 @@ const ContactPage = () => {
                 <br />
                 Sat: 9:00 AM - 2:00 PM
                 <br />
-                24/7 Emergency Support
+                Prompt Emergency Support
               </p>
             </div>
           </div>
@@ -538,7 +538,7 @@ const ContactPage = () => {
               Need Emergency Support?
             </h2>
             <p className="text-xl text-orange-100 mb-8 font-semibold leading-relaxed">
-              Our technical team is available 24/7 for urgent electrical issues
+              Our technical team is available for urgent electrical issues
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a

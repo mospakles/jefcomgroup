@@ -67,7 +67,7 @@ const FAQPage = () => {
       category: "services",
       question: "Do you provide maintenance services after installation?",
       answer:
-        "Absolutely! We provide comprehensive after-sales service and maintenance. After every installation, we have a structured follow-up system where clients are visited periodically. For some projects, we assign standby personnel for 3-6 months to monitor installations and train client staff. We also offer 24/7 emergency support for critical systems.",
+        "Absolutely! We provide comprehensive after-sales service and maintenance. After every installation, we have a structured follow-up system where clients are visited periodically. For some projects, we assign standby personnel for 3-6 months to monitor installations and train client staff. We also offer prompt emergency support for critical systems.",
     },
     {
       category: "solar",
@@ -128,7 +128,7 @@ const FAQPage = () => {
       category: "maintenance",
       question: "How quickly can you respond to emergency calls?",
       answer:
-        "We provide 24/7 emergency support. For critical systems (hospitals, data centers, telecommunications), we typically respond within 2-4 hours in Lagos and surrounding areas. For other locations, response times vary but we prioritize emergency calls. Clients with maintenance contracts receive priority emergency response.",
+        "We provide prompt emergency support. For critical systems (hospitals, data centers, telecommunications), we typically respond within 2-4 hours in Lagos and surrounding areas. For other locations, response times vary but we prioritize emergency calls. Clients with maintenance contracts receive priority emergency response.",
     },
     {
       category: "technical",

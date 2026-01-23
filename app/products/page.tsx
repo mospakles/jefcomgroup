@@ -75,7 +75,7 @@ const ProductsPage = () => {
         "Industrial Control & Automation Panels",
       ],
       brands: ["Schneider", "ABB", "Rittal", "Siemens", "Entis"],
-      image: "/images/control.jpg",
+      image: "/images/control.png",
     },
 
     // ☀️ SOLAR & ESS
@@ -168,7 +168,7 @@ const ProductsPage = () => {
       description: "Power and control cables for all installations",
       features: ["Armoured cables", "Non-armoured cables", "Flexible cables"],
       brands: ["Nigerchin", "Coleman Cables", "BICC", "Stopend", "DrsKable"],
-      image: "/images/electric.jpg",
+      image: "/images/electric.png",
     },
   ];
 
@@ -567,7 +567,7 @@ const ProductsPage = () => {
                 Technical Support
               </h3>
               <p className="text-gray-200 text-lg leading-relaxed">
-                24/7 assistance and maintenance services available
+                Prompt assistance and maintenance services available
               </p>
             </div>
           </div>

@@ -37,19 +37,19 @@ const Homepage = () => {
       title: "Electrical Designs",
       description:
         "ELV, Low, Medium and High voltage electrical design solutions",
-      image: "/images/cranes.jpg",
+      image: "/images/cranes.png",
     },
     {
       title: "Electrical & ELV Installation",
       description:
         "Conduit and industrial piping, wiring, cable routing, panels, lighting, Voice & Data",
-      image: "/images/mechinstall.jpg",
+      image: "/images/mechinstall.png",
     },
     {
       title: "Electrical Panels",
       description:
         "Generator synchronizing panels, ATS, power distribution and industrial control panels",
-      image: "/images/control.jpg",
+      image: "/images/control.png",
     },
     {
       title: "Renewable Energy",
@@ -154,7 +154,7 @@ const Homepage = () => {
     { number: "1000+", label: "Projects Completed" },
     { number: "25+", label: "Years Experience" },
     { number: "500+", label: "Happy Clients" },
-    { number: "24/7", label: "Support Available" },
+    { number: "Prompt", label: "Support Available" },
   ];
 
   const certifications = [
@@ -648,7 +648,7 @@ const Homepage = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section
+      {/* <section
         ref={testimonialsRef}
         className="py-28 bg-gray-900 relative overflow-hidden"
       >
@@ -723,7 +723,6 @@ const Homepage = () => {
               </div>
             </div>
 
-            {/* Navigation Buttons */}
             <button
               onClick={prevTestimonial}
               className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-6 bg-orange-600/20 hover:bg-orange-600 backdrop-blur-md text-white p-3 border-2 border-orange-500/50 hover:border-orange-500 transition-all z-20 rounded-full transform hover:scale-110 box-shadow-glow"
@@ -738,7 +737,7 @@ const Homepage = () => {
             </button>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Why Choose Us Section */}
       <section className="py-28 bg-gradient-to-br from-green-800 via-green-700 to-green-800 text-white relative overflow-hidden">
@@ -763,7 +762,7 @@ const Homepage = () => {
                 {[
                   "25+ years of proven engineering excellence",
                   "Highly trained and certified professionals",
-                  "24/7 maintenance and technical support",
+                  "Prompt maintenance and technical support",
                   "Quality-assured equipment and materials",
                   "Competitive pricing with no compromise on standards",
                 ].map((item, index) => (
@@ -840,7 +839,7 @@ const Homepage = () => {
                 icon: CheckCircle,
                 step: "04",
                 title: "Support",
-                description: "Ongoing maintenance and 24/7 assistance",
+                description: "Ongoing maintenance and prompt assistance",
               },
             ].map((process, index) => {
               const Icon = process.icon;

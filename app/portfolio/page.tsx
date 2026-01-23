@@ -38,10 +38,10 @@ const PortfolioPage = () => {
     { id: "lighting", name: "Lighting Systems", icon: Building2 },
     { id: "automation", name: "Automation", icon: Building2 },
     { id: "industrial", name: "Industrial", icon: Factory },
-    { id: "oil-gas", name: "Oil & Gas", icon: Droplet },
-    { id: "manufacturing", name: "Manufacturing", icon: Factory },
-    { id: "hospitality", name: "Hospitality", icon: Hotel },
-    { id: "religious", name: "Religious", icon: Church },
+    // { id: "oil-gas", name: "Oil & Gas", icon: Droplet },
+    // { id: "manufacturing", name: "Manufacturing", icon: Factory },
+    // { id: "hospitality", name: "Hospitality", icon: Hotel },
+    // { id: "religious", name: "Religious", icon: Church },
     { id: "marine", name: "Marine", icon: Factory },
   ];
 
@@ -49,7 +49,6 @@ const PortfolioPage = () => {
     {
       id: 1,
       category: "power-systems",
-      sector: "religious",
       title: "Christ Embassy 5,250KVA Generator Panel",
       description: "Synchronizing panel with 6300A automatic changeover system",
       fullDescription:
@@ -63,6 +62,10 @@ const PortfolioPage = () => {
         "/images/synccpanel.jpeg",
         "/images/synccpanell.jpeg",
         "/images/syncpanel.jpeg",
+        "/images/synccc.png",
+        "/images/syncccc.png",
+        "/images/synxc.png",
+        "/images/synxcc.png",
       ],
       highlights: [
         "5,250KVA generator synchronizing panel",
@@ -76,7 +79,6 @@ const PortfolioPage = () => {
     {
       id: 2,
       category: "power-systems",
-      sector: "religious",
       title: "LCA 10MVA Generator Synchronizing Panel",
       description: "Complete power distribution for multi-campus facility",
       fullDescription:
@@ -89,8 +91,11 @@ const PortfolioPage = () => {
         "/images/lcaapanel.jpeg",
         "/images/lcapanel.jpeg",
         "/images/lccaapanel.jpeg",
-        // "/images/distpanel.jpg",
-        // "/images/computer.jpg",
+        "/images/lca.png",
+        "/images/lca.JPG",
+        "/images/lcaa.JPG",
+        "/images/lcaaa.png",
+        "/images/lcaaaa.jpg",
       ],
       highlights: [
         "10MVA synchronizing panel capacity",
@@ -103,7 +108,6 @@ const PortfolioPage = () => {
     {
       id: 3,
       category: "automation",
-      sector: "religious",
       title: "LCA Smart Guesthouse Automation",
       description: "5-floor guesthouse with Smarthome G4 system",
       fullDescription:
@@ -113,9 +117,9 @@ const PortfolioPage = () => {
       scope: "Building Automation & Mechanical Systems",
       year: "2023",
       images: [
-        "/images/hotel.jpeg",
-        "/images/hotell.jpeg",
-        "/images/hotelll.jpeg",
+        "/images/guesthouse.png",
+        "/images/guesthousee.png",
+        "/images/hottel.jpeg",
       ],
       highlights: [
         "Smarthome G4 automation system",
@@ -128,7 +132,6 @@ const PortfolioPage = () => {
     {
       id: 4,
       category: "solar",
-      sector: "hospitality",
       title: "Omnia Hotel 180KW Solar Installation",
       description: "Complete solar system for 200-room hotel complex",
       fullDescription:
@@ -138,10 +141,13 @@ const PortfolioPage = () => {
       scope: "Complete Electrical & Solar Installation",
       year: "2024",
       images: [
-        "/images/omnia.jpeg",
-        "/images/hottel.jpeg",
+        // "/images/omnia.jpeg",
+        "/images/solar.jpg",
         "/images/hotellll.jpeg",
         "/images/hottell.jpeg",
+        "/images/hotel.jpeg",
+        "/images/hotell.jpeg",
+        "/images/hotelll.jpeg",
       ],
       highlights: [
         "200-room hotel electrical design",
@@ -156,8 +162,7 @@ const PortfolioPage = () => {
     {
       id: 5,
       category: "solar",
-      sector: "hospitality",
-      title: "90KW Commercial Solar Project",
+      title: "Commercial Solar Project",
       description: "Grid-tied solar system for office complex",
       fullDescription:
         "Complete grid-tied solar system installation for commercial office complex, featuring advanced monitoring and energy management systems with real-time performance tracking.",
@@ -167,8 +172,12 @@ const PortfolioPage = () => {
       year: "2023",
       images: [
         "/images/commercialsolar.jpg",
-        "/images/solar.jpg",
-        // "/images/tower.jpg",
+        "/images/commmmsolar.png",
+        "/images/commmmsolarr.png",
+        "/images/commmsolaar.png",
+        "/images/commmsolarr.png",
+        "/images/commsolar.png",
+        "/images/comsolar.png",
       ],
       highlights: [
         "90KW solar capacity",
@@ -181,7 +190,6 @@ const PortfolioPage = () => {
     {
       id: 6,
       category: "control-panels",
-      sector: "oil-gas",
       title: "Ascon Oil MCC & Control Panels",
       description: "Complete tank farm electrical control systems",
       fullDescription:
@@ -208,7 +216,6 @@ const PortfolioPage = () => {
     {
       id: 7,
       category: "control-panels",
-      sector: "oil-gas",
       title: "Sahara Oil Presidential Air Fleet Tank Farm",
       description: "Aviation fuel pump control and rehabilitation",
       fullDescription:
@@ -233,7 +240,6 @@ const PortfolioPage = () => {
     {
       id: 8,
       category: "control-panels",
-      sector: "oil-gas",
       title: "Shell Petroleum Oil Water Separator",
       description: "Automatic control panel for fuel depot",
       fullDescription:
@@ -253,7 +259,6 @@ const PortfolioPage = () => {
     {
       id: 9,
       category: "control-panels",
-      sector: "manufacturing",
       title: "CHI Ltd Dual 3200A Distribution System",
       description: "High-capacity factory power distribution",
       fullDescription:
@@ -278,7 +283,6 @@ const PortfolioPage = () => {
     {
       id: 10,
       category: "industrial",
-      sector: "manufacturing",
       title: "Cormart Multiple Facility Installations",
       description: "Comprehensive electrical systems across multiple plants",
       fullDescription:
@@ -291,6 +295,9 @@ const PortfolioPage = () => {
         "/images/comart.jpg",
         "/images/commart.jpg",
         "/images/comartt.jpg",
+        "/images/comart.png",
+        "/images/comaart.png",
+        "/images/commaart.png",
       ],
       highlights: [
         "Dual 400A UPS distribution panels",
@@ -304,7 +311,6 @@ const PortfolioPage = () => {
     {
       id: 11,
       category: "lighting",
-      sector: "hospitality",
       title: "Ikorodu Musical Village 6,000-Capacity Hall",
       description: "Complete electrical installation for event complex",
       fullDescription:
@@ -328,7 +334,6 @@ const PortfolioPage = () => {
     {
       id: 12,
       category: "control-panels",
-      sector: "oil-gas",
       title: "Loutronix Multiple Tank Farm Projects",
       description: "Control panels for petroleum facilities across Nigeria",
       fullDescription:
@@ -356,7 +361,6 @@ const PortfolioPage = () => {
     {
       id: 13,
       category: "marine",
-      sector: "industrial",
       title: "Nigeria Navy Ship Electrical Systems",
       description: "Naval vessel engine control and electrical systems",
       fullDescription:
@@ -377,7 +381,6 @@ const PortfolioPage = () => {
     {
       id: 14,
       category: "industrial",
-      sector: "manufacturing",
       title: "Plastic Manufacturing Machine Installations",
       description: "Multiple plastic processing equipment installations",
       fullDescription:
@@ -406,7 +409,6 @@ const PortfolioPage = () => {
     {
       id: 15,
       category: "industrial",
-      sector: "manufacturing",
       title: "Vectorstruct Power & Machine Systems",
       description: "Complete factory electrical and machine installation",
       fullDescription:
@@ -432,7 +434,6 @@ const PortfolioPage = () => {
     {
       id: 16,
       category: "industrial",
-      sector: "manufacturing",
       title: "Tripple Gee Printing Equipment Services",
       description: "Industrial printing machine electrical systems",
       fullDescription:
@@ -457,7 +458,6 @@ const PortfolioPage = () => {
     {
       id: 17,
       category: "automation",
-      sector: "hospitality",
       title: "Talldrum Smart Apartment & Office",
       description: "Smarthome automation for residential and commercial",
       fullDescription:
@@ -482,7 +482,6 @@ const PortfolioPage = () => {
     {
       id: 18,
       category: "power-systems",
-      sector: "religious",
       title: "Loveworld Exhibition Power Stations",
       description: "Warehouse power distribution systems",
       fullDescription:
@@ -502,7 +501,6 @@ const PortfolioPage = () => {
     {
       id: 19,
       category: "power-systems",
-      sector: "religious",
       title: "Christ Embassy Isolo Power Supply",
       description: "11KV to premises power distribution design",
       fullDescription:
@@ -522,7 +520,6 @@ const PortfolioPage = () => {
     {
       id: 20,
       category: "control-panels",
-      sector: "industrial",
       title: "BT Technologies Specialized Panels",
       description: "Data center and office power solutions",
       fullDescription:
@@ -543,7 +540,6 @@ const PortfolioPage = () => {
     {
       id: 21,
       category: "automation",
-      sector: "industrial",
       title: "Telnet Satellite Dish Control Systems",
       description: "Automatic tracking and power systems",
       fullDescription:
@@ -564,7 +560,6 @@ const PortfolioPage = () => {
     {
       id: 22,
       category: "automation",
-      sector: "hospitality",
       title: "Hotel Automation & Fire Systems",
       description: "Smart hotel and safety systems installation",
       fullDescription:
@@ -584,7 +579,6 @@ const PortfolioPage = () => {
     {
       id: 23,
       category: "industrial",
-      sector: "manufacturing",
       title: "Lloyd Angela Diesel Monitoring Systems",
       description: "BTS site diesel level sensors and storage",
       fullDescription:
@@ -604,8 +598,7 @@ const PortfolioPage = () => {
     {
       id: 24,
       category: "power-systems",
-      sector: "residential",
-      title: "Residential Changeover Panel Systems",
+      title: "Residential Project",
       description: "Domestic automatic power switching solutions",
       fullDescription:
         "Built and installed various capacity automatic changeover panels for residential applications. Capacities include 30KVA, 20KVA, 8KVA, 5.5KVA, and 2.5KVA for generator/PHCN supply switching in multiple domestic apartments.",
@@ -630,7 +623,6 @@ const PortfolioPage = () => {
     {
       id: 25,
       category: "industrial",
-      sector: "manufacturing",
       title: "Container Office Renovation",
       description: "Complete container office transformation",
       fullDescription:
@@ -651,7 +643,6 @@ const PortfolioPage = () => {
     {
       id: 26,
       category: "industrial",
-      sector: "commercial",
       title: "Chidan Port Harcourt Office",
       description: "Office electrical and mechanical renovation",
       fullDescription:
@@ -672,9 +663,9 @@ const PortfolioPage = () => {
 
   const filteredItems = portfolioItems.filter((item) => {
     const matchesCategory =
-      selectedCategory === "all" ||
-      item.category === selectedCategory ||
-      item.sector === selectedCategory;
+      selectedCategory === "all" || item.category === selectedCategory;
+    // ||
+    // item.sector === selectedCategory;
     const matchesSearch =
       item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
       item.client.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -683,13 +674,13 @@ const PortfolioPage = () => {
   });
 
   const selectedProjectData = portfolioItems.find(
-    (item) => item.id === selectedProject
+    (item) => item.id === selectedProject,
   );
 
   const nextImage = () => {
     if (selectedProjectData && selectedProjectData.images) {
       setCurrentImageIndex((prev) =>
-        prev === selectedProjectData.images.length - 1 ? 0 : prev + 1
+        prev === selectedProjectData.images.length - 1 ? 0 : prev + 1,
       );
     }
   };
@@ -697,7 +688,7 @@ const PortfolioPage = () => {
   const prevImage = () => {
     if (selectedProjectData && selectedProjectData.images) {
       setCurrentImageIndex((prev) =>
-        prev === 0 ? selectedProjectData.images.length - 1 : prev - 1
+        prev === 0 ? selectedProjectData.images.length - 1 : prev - 1,
       );
     }
   };
@@ -724,19 +715,19 @@ const PortfolioPage = () => {
           gsap.fromTo(
             ".hero-title",
             { opacity: 0, y: 100 },
-            { opacity: 1, y: 0, duration: 1.2, ease: "power4.out", delay: 0.3 }
+            { opacity: 1, y: 0, duration: 1.2, ease: "power4.out", delay: 0.3 },
           );
 
           gsap.fromTo(
             ".hero-line",
             { scaleX: 0 },
-            { scaleX: 1, duration: 0.8, ease: "power3.out", delay: 0.8 }
+            { scaleX: 1, duration: 0.8, ease: "power3.out", delay: 0.8 },
           );
 
           gsap.fromTo(
             ".hero-desc",
             { opacity: 0, y: 30 },
-            { opacity: 1, y: 0, duration: 0.8, ease: "power2.out", delay: 1 }
+            { opacity: 1, y: 0, duration: 0.8, ease: "power2.out", delay: 1 },
           );
 
           gsap.fromTo(
@@ -752,7 +743,7 @@ const PortfolioPage = () => {
                 trigger: filterRef.current,
                 start: "top 90%",
               },
-            }
+            },
           );
 
           gsap.fromTo(
@@ -769,7 +760,7 @@ const PortfolioPage = () => {
                 trigger: contentRef.current,
                 start: "top 80%",
               },
-            }
+            },
           );
 
           gsap.fromTo(
@@ -784,7 +775,7 @@ const PortfolioPage = () => {
                 trigger: ctaRef.current,
                 start: "top 80%",
               },
-            }
+            },
           );
         });
       });
@@ -805,7 +796,7 @@ const PortfolioPage = () => {
             duration: 0.5,
             stagger: 0.06,
             ease: "back.out(1.3)",
-          }
+          },
         );
       });
     }
@@ -872,7 +863,7 @@ const PortfolioPage = () => {
             </span>
           </div>
 
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-2">
             {categories.map((category) => {
               const Icon = category.icon;
               return (
@@ -1150,7 +1141,7 @@ const PortfolioPage = () => {
                         <span className="px-4 py-2 bg-gradient-to-r from-orange-600 to-orange-500 rounded-full text-sm font-bold text-white">
                           {
                             categories.find(
-                              (c) => c.id === selectedProjectData.category
+                              (c) => c.id === selectedProjectData.category,
                             )?.name
                           }
                         </span>
@@ -1228,25 +1219,9 @@ const PortfolioPage = () => {
                                   {highlight}
                                 </span>
                               </li>
-                            )
+                            ),
                           )}
                         </ul>
-                      </div>
-                    )}
-
-                    {/* Sector Badge */}
-                    {selectedProjectData.sector && (
-                      <div className="mt-6 flex items-center justify-center">
-                        <span className="text-sm text-gray-400 mr-2">
-                          Industry:
-                        </span>
-                        <span className="px-4 py-2 bg-gradient-to-r from-green-700 to-green-800 text-white rounded-full text-xs font-bold border border-green-600">
-                          {
-                            categories.find(
-                              (c) => c.id === selectedProjectData.sector
-                            )?.name
-                          }
-                        </span>
                       </div>
                     )}
                   </div>
