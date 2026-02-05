@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Send, CheckCircle, AlertCircle } from "lucide-react";
 import Image from "next/image";
 
 const ContactPage = () => {
@@ -14,26 +14,57 @@ const ContactPage = () => {
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState("");
+  
   const heroRef = useRef(null);
   const contactCardsRef = useRef(null);
   const formRef = useRef(null);
   const whyContactRef = useRef(null);
   const emergencyRef = useRef(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        company: "",
-        service: "",
-        message: "",
+    setIsSubmitting(true);
+    setError("");
+
+    try {
+      const response = await fetch('/.netlify/functions/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       });
-    }, 3000);
+
+      console.log('Form submission response:', response);
+      const data = await response.json();
+
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to send message');
+      }
+
+      // Success!
+      setSubmitted(true);
+      setTimeout(() => {
+        setSubmitted(false);
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          company: "",
+          service: "",
+          message: "",
+        });
+      }, 5000);
+
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Something went wrong. Please try again.');
+      console.error('Form submission error:', err);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
@@ -336,6 +367,13 @@ const ContactPage = () => {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  {error && (
+                    <div className="bg-red-900/50 border-2 border-red-500 rounded-lg p-4 flex items-center gap-3">
+                      <AlertCircle className="w-5 h-5 text-red-400 flex-shrink-0" />
+                      <p className="text-red-200 text-sm font-semibold">{error}</p>
+                    </div>
+                  )}
+
                   <div className="form-input opacity-0">
                     <label
                       htmlFor="name"
@@ -350,7 +388,8 @@ const ContactPage = () => {
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-gray-700/50 border-2 border-gray-600 text-white rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all placeholder-gray-500 font-semibold"
+                      disabled={isSubmitting}
+                      className="w-full px-4 py-3 bg-gray-700/50 border-2 border-gray-600 text-white rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all placeholder-gray-500 font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
                       placeholder="John Doe"
                     />
                   </div>
@@ -370,7 +409,8 @@ const ContactPage = () => {
                         required
                         value={formData.email}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-gray-700/50 border-2 border-gray-600 text-white rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all placeholder-gray-500 font-semibold"
+                        disabled={isSubmitting}
+                        className="w-full px-4 py-3 bg-gray-700/50 border-2 border-gray-600 text-white rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all placeholder-gray-500 font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
                         placeholder="john@example.com"
                       />
                     </div>
@@ -389,7 +429,8 @@ const ContactPage = () => {
                         required
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-gray-700/50 border-2 border-gray-600 text-white rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all placeholder-gray-500 font-semibold"
+                        disabled={isSubmitting}
+                        className="w-full px-4 py-3 bg-gray-700/50 border-2 border-gray-600 text-white rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all placeholder-gray-500 font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
                         placeholder="+234 800 000 0000"
                       />
                     </div>
@@ -408,7 +449,8 @@ const ContactPage = () => {
                       name="company"
                       value={formData.company}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-gray-700/50 border-2 border-gray-600 text-white rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all placeholder-gray-500 font-semibold"
+                      disabled={isSubmitting}
+                      className="w-full px-4 py-3 bg-gray-700/50 border-2 border-gray-600 text-white rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all placeholder-gray-500 font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
                       placeholder="Your Company"
                     />
                   </div>
@@ -426,7 +468,8 @@ const ContactPage = () => {
                       required
                       value={formData.service}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-gray-700/50 border-2 border-gray-600 text-white rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all font-semibold"
+                      disabled={isSubmitting}
+                      className="w-full px-4 py-3 bg-gray-700/50 border-2 border-gray-600 text-white rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                       <option value="">Select a service</option>
                       <option value="electrical-design">
@@ -457,17 +500,28 @@ const ContactPage = () => {
                       rows={5}
                       value={formData.message}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-gray-700/50 border-2 border-gray-600 text-white rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all resize-none placeholder-gray-500 font-semibold"
+                      disabled={isSubmitting}
+                      className="w-full px-4 py-3 bg-gray-700/50 border-2 border-gray-600 text-white rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all resize-none placeholder-gray-500 font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
                       placeholder="Tell us about your project requirements..."
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="form-input opacity-0 w-full bg-gradient-to-r from-orange-600 to-orange-500 text-white px-8 py-4 rounded-lg hover:from-orange-700 hover:to-orange-600 transition-all duration-300 font-black flex items-center justify-center shadow-2xl heading-font tracking-wider text-lg transform hover:scale-105 box-shadow-glow"
+                    disabled={isSubmitting}
+                    className="form-input opacity-0 w-full bg-gradient-to-r from-orange-600 to-orange-500 text-white px-8 py-4 rounded-lg hover:from-orange-700 hover:to-orange-600 transition-all duration-300 font-black flex items-center justify-center shadow-2xl heading-font tracking-wider text-lg transform hover:scale-105 box-shadow-glow disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                   >
-                    Send Message
-                    <Send className="w-5 h-5 ml-2" />
+                    {isSubmitting ? (
+                      <>
+                        <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        Send Message
+                        <Send className="w-5 h-5 ml-2" />
+                      </>
+                    )}
                   </button>
                 </form>
               )}
