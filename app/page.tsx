@@ -158,11 +158,11 @@ const Homepage = () => {
   ];
 
   const certifications = [
-    {
-      icon: Award,
-      title: "ISO 9001:2015",
-      description: "Quality Management",
-    },
+    // {
+    //   icon: Award,
+    //   title: "ISO 9001:2015",
+    //   description: "Quality Management",
+    // },
     {
       icon: Shield,
       title: "COREN Certified",
@@ -779,7 +779,7 @@ const Homepage = () => {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 gap-8">
               {certifications.map((item, index) => {
                 const Icon = item.icon;
                 return (
