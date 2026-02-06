@@ -1,7 +1,7 @@
 import { Handler } from "@netlify/functions";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// const resend = new Resend(process.env.RESEND_API_KEY);
 
 export const handler: Handler = async (event) => {
   // Set CORS headers
@@ -28,6 +28,22 @@ export const handler: Handler = async (event) => {
       body: JSON.stringify({ error: "Method not allowed" }),
     };
   }
+
+  const apiKey = process.env.RESEND_API_KEY;
+
+  if (!apiKey) {
+    console.error("RESEND_API_KEY missing at runtime");
+    return {
+      statusCode: 500,
+      headers,
+      body: JSON.stringify({
+        error: "Email service not configured",
+      }),
+    };
+  }
+
+  // ✅ CREATE CLIENT HERE
+  const resend = new Resend(apiKey);
 
   try {
     // Parse the form data
